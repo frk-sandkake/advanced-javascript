@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q 2</title>
+    <script type="text/javascript">
+    // write a function that returns the number of its own calls
+
+    function countCalls() {
+        console.log(countCalls.currantCount);
+        //                                      2
+        //                                      1
+        countCalls.currantCount = (countCalls.currantCount || 0); // Makes it into an object
+        console.log(typeof countCalls.currantCount);
+        console.log(typeof countCalls);
+        // 0
+        // ++ 0 = 1
+        // 1
+
+        // 1 + 1 = 2
+        // 2
+
+        // 1 + 2 = 3
+        // 3
+        return alert("You called " + ++countCalls.currantCount); // ++ before to get it to call from nr 1
+    }
+    countCalls(); // You called 1
+    countCalls(); // You called 2
+    countCalls(); // You called 3
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

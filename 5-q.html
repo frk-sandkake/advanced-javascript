@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q 5</title>
+    <script type="text/javascript">
+        // write a function that adds numbers when called twice
+        // currying is when you call a function inside a function = add(4)(3) = 7
+
+        function add(x) {
+            return function (y) {
+                return x + y;
+            }
+        }
+        alert(add(3)(4));
+
+        let arr = [1,5,-91,4,777,22];
+        function compN(x,y) {
+            if(x >= y) {
+                return 1;
+            }
+            if (x < y) {
+                return -1;
+            }
+        }
+
+        let sortArr = arr.sort(compN);
+        console.log(sortArr);
+
+        let minValue = sortArr[0];
+        let maxValue = sortArr[arr.length - 1];
+        console.log(minValue);
+        console.log(maxValue);
+
+        console.log([] === []);
+        console.log({} === {});
+        console.log([] !== []);
+        console.log({} !== {});
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

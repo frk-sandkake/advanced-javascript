@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q 3</title>
+    <script type="text/javascript">
+    // Write a function that takes 1 parameter
+    // on first call it remembers the parameter
+    // on second call it sums the passed parameter with the parameter passed during previous call
+
+    function sum(x) {
+        // first call sum.x is undefined
+        //           (sum.x = 0) + (x = 3) = 3
+
+        // second call sum.x is 3
+        //           (sum.x = 3) + (x = 5) = 8
+
+        // third call sum.x is 8
+        //           (sum.x = 8) + (x = 226) = 236
+
+        sum.x = (sum.x || 0) + x;
+        return sum.x;
+    }
+    console.log(sum(3));
+    console.log(sum(5));
+    console.log(sum(228));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

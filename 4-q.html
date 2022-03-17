@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q 4</title>
+    <script type="text/javascript">
+        // create a function with one arg that counts string type properties
+
+        var someObj = {
+            first: "Hesham",
+            name: "Linda",
+            basket: ["pen", 2, 6, 8],
+            age: null,
+            isHappy: false
+        }
+
+        function strObject(obj) {
+            var counter = 0;
+
+            for(var i in obj) {
+                if(typeof obj[i] === "string") { // Will find all strings in someObj but not in the basket array
+                    counter++;
+                }
+                else if(typeof obj[i] === "object") { // This will get the basket array and for loop will add the strings to the total count.
+                    counter += strObject(obj[i]);
+                   // counter = counter + strObject(obj[i]);
+                }
+            }
+            return counter;
+        }
+        console.log(strObject(someObj));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q 1</title>
+    <script type="text/javascript">
+
+    var value = 0; // Global scope
+
+    function alertFunction() {
+        if (!1) { // true because the value has been reassigned. Doesn't mather what you have in the () Other than if you use (!) then it will be false
+            value = true;
+        } else {
+            var value = false; // this will not be registered because it's a local variable
+        }
+        alert(value);
+    }
+    alertFunction();
+
+    </script>
+</head>
+<body>
+<h1></h1>
+</body>
+</html>
